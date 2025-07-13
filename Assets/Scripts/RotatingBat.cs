@@ -1,12 +1,14 @@
+//Makes the bat rotate perpetually
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotatingRectangle : MonoBehaviour
+public class RotatingBat : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public float rotationSpeed = 50f;
+    public float rotationSpeed = -200f;
 
     void Start()
     {

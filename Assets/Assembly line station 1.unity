@@ -618,7 +618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 950214217}
   - component: {fileID: 950214216}
-  - component: {fileID: 950214215}
+  - component: {fileID: 950214218}
   m_Layer: 0
   m_Name: BatHandle
   m_TagString: Untagged
@@ -626,19 +626,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &950214215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 950214214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f7b18bc86d54064c86027f5a72622cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: -200
 --- !u!212 &950214216
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -707,6 +694,19 @@ Transform:
   - {fileID: 260028806}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -37.606}
+--- !u!114 &950214218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950214214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f7b18bc86d54064c86027f5a72622cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: -200
 --- !u!1 &1832908061
 GameObject:
   m_ObjectHideFlags: 0
