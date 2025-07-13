@@ -699,14 +699,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950214214}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.41, y: -3.01, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.3223181, w: 0.94663143}
+  m_LocalPosition: {x: -7.47, y: -2.55, z: 0}
   m_LocalScale: {x: 0.48875126, y: 1.3835452, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 260028806}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -37.606}
 --- !u!1 &1832908061
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,7 +786,7 @@ Transform:
   m_GameObject: {fileID: 1832908061}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.11, y: 0.12, z: 0}
+  m_LocalPosition: {x: -4.25, y: 0.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -804,6 +804,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c1e939306ef9a41b0abb3f8f01950d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointA: 3.25
+  pointB: -4.25
+  speed: 0.02
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
