@@ -8,7 +8,7 @@ public class Ball : MonoBehaviour
 {
     public float pointA;
     public float pointB;
-    public float speed = 0.02f;
+    public float speed = 0.04f;
 
     private Vector3 startPosition;
 
@@ -36,15 +36,17 @@ public class Ball : MonoBehaviour
 
         //Variable that defines the location the ball is to stop and wait to be hit by the bat
         bool batSwing = Input.GetMouseButtonDown(0);
-        bool batHit = transform.position.x < pointB;
+        bool batHit = transform.position.x <= pointB;
 
-        if (batSwing && batHit)
+        if (batSwing)
         {
-            speed = speed + 0.04f;
+            speed = 0.04f;
         }
         else if (batHit)
         {
             speed = 0f;
         }
+        
     }
 }
+

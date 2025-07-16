@@ -14,7 +14,7 @@ public class RotatingBat : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(RotateForDuration(1f)); //Starts one rotation on the first frame
+        
     }
 
     void Update()
