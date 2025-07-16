@@ -34,7 +34,7 @@ public class Ball : MonoBehaviour
             speed = speed - 0.04f;
         }
 
-        //Variable that defines the location the ball is to be hit at and change directions
+        //Variable that defines the location the ball is to stop and wait to be hit by the bat
         bool batSwing = Input.GetMouseButtonDown(0);
         bool batHit = transform.position.x < pointB;
 

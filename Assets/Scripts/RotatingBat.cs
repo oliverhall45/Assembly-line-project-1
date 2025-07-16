@@ -8,13 +8,13 @@ public class RotatingBat : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public Vector3 rotationAxis = Vector3.up; // Change to Vector3.right or Vector3.forward if needed
+    public Vector3 rotationAxis = Vector3.up; //rotation axis
     public float rotationSpeed = 360f; // degrees per second
     private bool isRotating = false;
 
     void Start()
     {
-        StartCoroutine(RotateForDuration(1f));
+        StartCoroutine(RotateForDuration(1f)); //Starts one rotation on the first frame
     }
 
     void Update()
