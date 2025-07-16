@@ -6,8 +6,8 @@ public class Button : MonoBehaviour
 {
     public GameObject ball;
     public float triggerDistance = 1f;
-    public Color activateColor = Color.red;
-    public Color defaultColor = Color.green;
+    public Color activateColour = Color.red;
+    public Color defaultColour = Color.green;
 
 
     SpriteRenderer buttonRenderer;
@@ -39,11 +39,11 @@ public class Button : MonoBehaviour
         float distance = Vector3.Distance(transform.position, ball.transform.position);
         if(distance <= triggerDistance)
         {
-            buttonRenderer.color = activateColor;
+            buttonRenderer.color = activateColour;
         }
         else
         {
-            buttonRenderer.color = defaultColor;
+            buttonRenderer.color = defaultColour;
         }
     }
 }
