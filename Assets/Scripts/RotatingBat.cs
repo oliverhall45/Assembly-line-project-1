@@ -9,12 +9,12 @@ public class RotatingBat : MonoBehaviour
     // Start is called before the first frame update
 
     public Vector3 rotationAxis = Vector3.up; //rotation axis
-    public float rotationSpeed = 360f; // degrees per second
+    public float rotationSpeed = 360; // degrees per second
     private bool isRotating = false;
 
     void Start()
     {
-        
+
     }
 
     void Update()
@@ -23,6 +23,7 @@ public class RotatingBat : MonoBehaviour
         {
             StartCoroutine(RotateForDuration(1f)); // Rotate for 1 second
         }
+       
     }
 
     System.Collections.IEnumerator RotateForDuration(float duration)
@@ -30,7 +31,7 @@ public class RotatingBat : MonoBehaviour
         isRotating = true;
 
         float elapsedTime = 0f;
-        while (elapsedTime < duration)
+        while (elapsedTime <= duration)
         {
             float step = rotationSpeed * Time.deltaTime;
             transform.Rotate(rotationAxis, step);
@@ -41,3 +42,4 @@ public class RotatingBat : MonoBehaviour
         isRotating = false;
     }
 }
+
