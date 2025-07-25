@@ -16,7 +16,8 @@ public class GreenColourChanger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        activate = false;
+        deactivate = false;
     }
 
     // Update is called once per frame
@@ -45,12 +46,13 @@ public class GreenColourChanger : MonoBehaviour
         }
 
         //If 'E' is pressed, the piston will go down. If its released, it will go back up.
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             activate = true;
             deactivate = false;
         }
-        else
+        
+        if(timePassed >= 1)
         {
             activate = false;
             deactivate = true;

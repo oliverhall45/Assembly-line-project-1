@@ -1,19 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MovingObject : MonoBehaviour
 {
     public GameObject colourChangerGreen;
     public GameObject colourChangerBlue;
+    public GameObject destroyerPiston;
+    public GameObject endPointDestroyer;
     public float triggerDistance = 1f;
     public float speed;
+    public Slider speedSlider;
 
     SpriteRenderer movingObjectRenderer;
     // Start is called before the first frame update
     void Start()
     {
         movingObjectRenderer = gameObject.GetComponent<SpriteRenderer>();
+        speedSlider.value = speed;
     }
 
     // Update is called once per frame
@@ -34,5 +39,22 @@ public class MovingObject : MonoBehaviour
         {
             movingObjectRenderer.color = Color.blue;
         }
+
+        float distanceDestroy = Vector3.Distance(transform.position, destroyerPiston.transform.position);
+        if (distanceDestroy < triggerDistance)
+        {
+            Destroy(gameObject);
+        }
+
+        float distanceDestroyEnd = Vector3.Distance(transform.position, endPointDestroyer.transform.position);
+        if (distanceDestroyEnd < triggerDistance)
+        {
+            Destroy(gameObject);
+        }
+
+    }
+    public void SpeedSlider()
+    {
+        speed = speedSlider.value;
     }
 }

@@ -14,7 +14,8 @@ public class DestroyerPiston : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        activate = false;
+        deactivate = false;
     }
 
     // Update is called once per frame
@@ -43,12 +44,13 @@ public class DestroyerPiston : MonoBehaviour
         }
 
         //If 'E' is pressed, the piston will go down. If its released, it will go back up.
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             activate = true;
             deactivate = false;
         }
-        else
+        
+        if(timePassed >= 1)
         {
             activate = false;
             deactivate = true;
