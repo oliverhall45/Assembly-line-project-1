@@ -12,6 +12,8 @@ public class MovingObject : MonoBehaviour
     public float triggerDistance = 1f;
     public float speed;
     public Slider speedSlider;
+    public float targetPositionMax = 8;
+    public float targetPositionMin = 7;
 
     SpriteRenderer movingObjectRenderer;
     // Start is called before the first frame update
@@ -54,7 +56,20 @@ public class MovingObject : MonoBehaviour
         if (distanceDestroyEnd < triggerDistance)
         {
             Destroy(gameObject);
+            
         }
+
+        if (movingObjectRenderer.color == Color.green && transform.position.x <= targetPositionMax && transform.position.x >= targetPositionMin)
+        {
+            Debug.Log("pibble");
+        }
+
+        if (movingObjectRenderer.color == Color.blue && transform.position.x <= targetPositionMax && transform.position.x >= targetPositionMin)
+        {
+            Debug.Log("pibble2");
+        }
+
+
 
     }
     public void SpeedSlider()
