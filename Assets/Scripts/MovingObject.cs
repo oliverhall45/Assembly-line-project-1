@@ -28,24 +28,28 @@ public class MovingObject : MonoBehaviour
 
         transform.position = newPosition;
 
+        //turns the object green when the colour changer green piston touches it
         float distanceGreen = Vector3.Distance(transform.position, colourChangerGreen.transform.position);
         if(distanceGreen < triggerDistance)
         {
             movingObjectRenderer.color = Color.green;
         }
 
+        //turns the object blue when the colour changer blue piston touches it
         float distanceBlue = Vector3.Distance(transform.position, colourChangerBlue.transform.position);
         if (distanceBlue < triggerDistance)
         {
             movingObjectRenderer.color = Color.blue;
         }
 
+        //Destroys the object when the destroy piston touches it
         float distanceDestroy = Vector3.Distance(transform.position, destroyerPiston.transform.position);
         if (distanceDestroy < triggerDistance)
         {
             Destroy(gameObject);
         }
 
+        //Destroys the object when it reaches the end of its path
         float distanceDestroyEnd = Vector3.Distance(transform.position, endPointDestroyer.transform.position);
         if (distanceDestroyEnd < triggerDistance)
         {
