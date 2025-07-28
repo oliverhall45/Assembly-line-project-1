@@ -9,6 +9,7 @@ public class MovingObject : MonoBehaviour
     public GameObject colourChangerBlue;
     public GameObject destroyerPiston;
     public GameObject endPointDestroyer;
+    public GameObject lightObject;
     public float triggerDistance = 1f;
     public float speed;
     public Slider speedSlider;
@@ -16,10 +17,12 @@ public class MovingObject : MonoBehaviour
     public float targetPositionMin = 7;
 
     SpriteRenderer movingObjectRenderer;
+    SpriteRenderer lightObjectRenderer;
     // Start is called before the first frame update
     void Start()
     {
         movingObjectRenderer = gameObject.GetComponent<SpriteRenderer>();
+        lightObjectRenderer = lightObject.GetComponent<SpriteRenderer>();
         speedSlider.value = speed;
     }
 
@@ -61,14 +64,18 @@ public class MovingObject : MonoBehaviour
 
         if (movingObjectRenderer.color == Color.green && transform.position.x <= targetPositionMax && transform.position.x >= targetPositionMin)
         {
-            Debug.Log("pibble");
+            lightObjectRenderer.material.color = Color.green;
         }
 
         if (movingObjectRenderer.color == Color.blue && transform.position.x <= targetPositionMax && transform.position.x >= targetPositionMin)
         {
-            Debug.Log("pibble2");
+            lightObjectRenderer.material.color = Color.yellow;
         }
 
+        if(movingObjectRenderer.color != Color.blue && movingObjectRenderer.color != Color.green && transform.position.x <= targetPositionMax && transform.position.x >= targetPositionMin)
+        {
+            lightObjectRenderer.material.color = Color.red;
+        }
 
 
     }
