@@ -22,7 +22,7 @@ public class InstantiateNewMovingObject : MonoBehaviour
 
     public void InstantiateMovingObject()
     {
-        
+        //creates a new movingObject when the "create object" button is pressed
         GameObject movingObject = Instantiate(newMovingObject, transform.position, Quaternion.identity);
 
             if (startPointInstantiator != null)

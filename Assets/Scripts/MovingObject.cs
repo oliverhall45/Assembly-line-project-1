@@ -62,23 +62,28 @@ public class MovingObject : MonoBehaviour
             
         }
 
+        //Checks if the object was green when it touches the end point. Turns the light green if so
         if (movingObjectRenderer.color == Color.green && transform.position.x <= targetPositionMax && transform.position.x >= targetPositionMin)
         {
             lightObjectRenderer.material.color = Color.green;
         }
 
+        //Checks if the object was blue when it touches the end point. Turns the light yellow if so
         if (movingObjectRenderer.color == Color.blue && transform.position.x <= targetPositionMax && transform.position.x >= targetPositionMin)
         {
             lightObjectRenderer.material.color = Color.yellow;
         }
 
-        if(movingObjectRenderer.color != Color.blue && movingObjectRenderer.color != Color.green && transform.position.x <= targetPositionMax && transform.position.x >= targetPositionMin)
+        //Checks if the object was not green or blue when it touches the end point. Turns the light red if so
+        if (movingObjectRenderer.color != Color.blue && movingObjectRenderer.color != Color.green && transform.position.x <= targetPositionMax && transform.position.x >= targetPositionMin)
         {
             lightObjectRenderer.material.color = Color.red;
         }
 
 
     }
+
+    //speed slider controlling the speed of the next object spawned
     public void SpeedSlider()
     {
         speed = speedSlider.value;
